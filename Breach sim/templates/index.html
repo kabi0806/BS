@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vulnerable App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Vulnerable Web Application</h1>
+    <form action="/search" method="post">
+        <input type="text" name="search_query" placeholder="Search">
+        <button type="submit">Search</button>
+    </form>
+    <form action="/comments" method="post">
+        <textarea name="comment" placeholder="Leave a comment"></textarea>
+        <button type="submit">Submit Comment</button>
+    </form>
+    <a href="/csrf-form">CSRF Form</a>
+    <a href="/login">Login</a>
+    <a href="/admin">Admin Panel</a>
+    <a href="/profile-data">Profile Data</a>
+    <a href="/login-attempt">Login Attempt</a>
+    <a href="/vulnerable-component">Vulnerable Component</a>
+    <a href="/admin-section">Admin Section</a>
+</body>
+</html>
